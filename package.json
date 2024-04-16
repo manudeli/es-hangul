@@ -1,5 +1,12 @@
 {
   "name": "es-hangul",
+  "description": "A modern JavaScript library for handling Hangul characters.",
+  "homepage": "https://es-hangul.slash.page",
+  "bugs": "https://github.com/toss/es-hangul/issues",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/toss/es-hangul.git"
+  },
   "workspaces": [
     ".",
     "docs"
@@ -22,6 +29,8 @@
     "./package.json": "./package.json"
   },
   "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
   "devDependencies": {
     "@changesets/cli": "^2.27.1",
     "@netlify/plugin-nextjs": "^5.0.0",
@@ -39,19 +48,7 @@
     "dist/*"
   ],
   "publishConfig": {
-    "access": "public",
-    "exports": {
-      ".": {
-        "require": "./dist/index.js",
-        "import": "./dist/index.mjs",
-        "types": "./dist/index.d.ts"
-      },
-      "./package.json": "./package.json"
-    },
-    "import": "./dist/index.mjs",
-    "main": "./dist/index.js",
-    "module": "./dist/index.mjs",
-    "types": "./dist/index.d.ts"
+    "access": "public"
   },
   "keywords": [
     "한글",
